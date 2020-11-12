@@ -22,9 +22,9 @@ const App = () => {
             SetOnOff(on)
         }}/>
 
-        <Accardion titleValve={"hhr"} collapsed={AccordionCollapsed} onClick={() => {
+        {/*<Accardion titleValve={"hhr"} collapsed={AccordionCollapsed} onClick={() => {
             SetAccordionCollapsed(!AccordionCollapsed)
-        }} item={["1", "2"]}/>
+        }} item={["1", "2"]} />*/}
 
 
         <Rating onClick={SetValue} value={ratingvalue}/>

@@ -10,15 +10,30 @@ type SelectPropsType={
     items: Array<itemType>
 }
 
+/*
 
-function Select(props: SelectPropsType){
+export function Select(props: SelectPropsType){
 return(
     <div>
-        <div>{props.items.find(i => i.value = value)}</div>
+        <div onClick={()=>props.onChange}>{props.items.find(i => i.value == props.value)}</div>
         {props.items.map(i => <div>{i.title}</div>)}
     </div>
 )
 }
+*/
+type  xxx = {collapsed: boolean}
+export function Select(props: xxx){
+    return(
+        <div>
+
+            <div>xxx</div>
+
+
+                <div>yyy</div>
+                <div>zzz</div>
+                <div>qqq</div>
+
+        </div>)}
 
 
 

@@ -19,7 +19,11 @@ export const AccordionColapsed: Story<any> = () => <Accardion onClick={action("c
 export const AccordionNoColapsed: Story<any> = () => <Accardion onClick={action("click")} collapsed={false} titleValve={"touch me"} item={[{title: "Serey", value: 1}, {title: "Nastia", value: 2},{title: "Denis", value: 3}]} onClickTitle={onClickCollBack}/>;
 export const ChangeAccordio: Story<any> = () => {
     const [value, setValue] =useState(true)
-    return<Accardion onClick={()=>{setValue(!value)}} collapsed={value} titleValve={"touch me"} item={[{title: "Serey", value: 1}, {title: "Nastia", value: 2},{title: "Denis", value: 3}]} onClickTitle={onClickCollBack} />;
+    return<Accardion onClick={()=>{setValue(!value)}}
+                     collapsed={value}
+                     titleValve={"touch me"}
+                     item={[{title: "Serey", value: 1}, {title: "Nastia", value: 2},{title: "Denis", value: 3}]}
+                     onClickTitle={onClickCollBack} />;
 }
 
 
