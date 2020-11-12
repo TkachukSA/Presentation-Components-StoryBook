@@ -1,11 +1,16 @@
 import React from "react";
 import {RatingValue} from "../../componets/Rating/Rating";
+type itemType={
+    title: string
+    value: any
+}
 
 export type AccardionProopsType = {
     titleValve: string
     collapsed: boolean
     onClick: () => void
-    item: Array<string>
+    item: Array<itemType>
+    onClickTitle: (value: any)=> void
 }
 
 
@@ -13,7 +18,7 @@ function Accardion(props: AccardionProopsType) {
     console.log("Accordion Reading")
     return (<div>
             <AccordionTitle title={props.titleValve} onClick={props.onClick}  />
-            {!props.collapsed && <AccordionBody item={props.item}/>}
+            {!props.collapsed && <AccordionBody onClickTitle={props.onClickTitle} item={props.item}/>}
 
         </div>
     )
@@ -31,15 +36,18 @@ function AccordionTitle(props: AccordionTitlePropsType) {
 }
 
 
-type AccordionBodyType={item: Array<string> }
+type AccordionBodyType={
+    item: Array<itemType>
+    onClickTitle: (value: any)=> void
+}
 function AccordionBody(props: AccordionBodyType) {
 
-return ( <ul>
+return  <ul>
         {
-            props.item.map((i, index) => <li key={index}>{i}</li>)
+            props.item.map((i, index) => <li onClick={()=>{props.onClickTitle(i.value)}} key={index}>{i.title}</li>)
         }
     </ul>
-)
+
 
 }
 
