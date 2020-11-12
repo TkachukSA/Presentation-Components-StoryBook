@@ -5,6 +5,7 @@ export type AccardionProopsType = {
     titleValve: string
     collapsed: boolean
     onClick: () => void
+    item: Array<string>
 }
 
 
@@ -12,7 +13,7 @@ function Accardion(props: AccardionProopsType) {
     console.log("Accordion Reading")
     return (<div>
             <AccordionTitle title={props.titleValve} onClick={props.onClick}  />
-            {!props.collapsed && <AccordionBody/>}
+            {!props.collapsed && <AccordionBody item={props.item}/>}
 
         </div>
     )
@@ -29,15 +30,17 @@ function AccordionTitle(props: AccordionTitlePropsType) {
     )
 }
 
-function AccordionBody() {
-    console.log("Accordionbody reandaring")
-    return (
-        <ul>
-            <ol>1</ol>
-            <ol>2</ol>
-            <ol>3</ol>
-        </ul>
-    )
+
+type AccordionBodyType={item: Array<string> }
+function AccordionBody(props: AccordionBodyType) {
+
+return ( <ul>
+        {
+            props.item.map((i, index) => <li key={index}>{i}</li>)
+        }
+    </ul>
+)
+
 }
 
 export default Accardion;

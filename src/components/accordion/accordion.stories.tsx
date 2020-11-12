@@ -14,11 +14,11 @@ export default {
     component: Accardion,
 } as Meta;
 
-export const AccordionColapsed: Story<any> = () => <Accardion onClick={action("click")} collapsed={true} titleValve={"touch me"}/>;
-export const AccordionNoColapsed: Story<any> = () => <Accardion onClick={action("click")} collapsed={false} titleValve={"touch me"}/>;
+export const AccordionColapsed: Story<any> = () => <Accardion onClick={action("click")} collapsed={true} titleValve={"touch me"} item={["Serey", "Nastia", "Denis", "Vlad"]}/>;
+export const AccordionNoColapsed: Story<any> = () => <Accardion onClick={action("click")} collapsed={false} titleValve={"touch me"} item={["Serey", "Nastia", "Denis", "Vlad"]}/>;
 export const ChangeAccordio: Story<any> = () => {
     const [value, setValue] =useState(true)
-    return<Accardion onClick={()=>{setValue(!value)}} collapsed={value} titleValve={"touch me"}/>;
+    return<Accardion onClick={()=>{setValue(!value)}} collapsed={value} titleValve={"touch me"} item={["Serey", "Nastia", "Denis", "Vlad"]} />;
 }
 
 
