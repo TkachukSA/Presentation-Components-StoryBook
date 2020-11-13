@@ -24,7 +24,7 @@ export const Selectcolapsed: Story<any> = () => {
                 {title: "Serey", value: 1},
                 {title: "Nastia", value: 2},
                 {title: "Denis", value: 3},
-                {title: "boby", value: 3}
+                {title: "boby", value: 4}
             ]}/>)
 }
 

@@ -4,10 +4,14 @@
     min-height: 20px;
     min-width: 40px;
 }
-.item {
-    border: 1px solid black;
+.items {
+
     position: absolute;
+    padding: 5px;
+    border: 1px solid black;
 }
-.select.active{
-    display: none;
+
+.item.select{
+    background-color: blue;
+    color: white;
 }
