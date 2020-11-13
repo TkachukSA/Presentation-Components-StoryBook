@@ -1,0 +1,13 @@
+.select .main{
+    border: 1px solid black;
+    display: inline-block;
+    min-height: 20px;
+    min-width: 40px;
+}
+.item {
+    border: 1px solid black;
+    position: absolute;
+}
+.select.active{
+    display: none;
+}

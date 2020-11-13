@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import { Story, Meta } from '@storybook/react/types-6-0';
 
 import OnOff2 from "./onOff2";
-import Rating, {RatingValue} from "./Rating/Rating";
+
 import {action} from "@storybook/addon-actions";
 
 

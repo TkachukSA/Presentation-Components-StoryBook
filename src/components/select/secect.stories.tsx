@@ -13,17 +13,18 @@ export default {
 } as Meta;
 
 export const Selectcolapsed: Story<any> = () => {
+    const [value, setvalue]=useState(0)
 
-    const [value, setValue] = useState(true)
+
     return (
         < Select
-            onChange={setValue(!value)}
-            /*onChange={setValue}*/
+            onClick={setvalue}
             value={value}
             items={[
                 {title: "Serey", value: 1},
                 {title: "Nastia", value: 2},
-                {title: "Denis", value: 3}
+                {title: "Denis", value: 3},
+                {title: "boby", value: 3}
             ]}/>)
 }
 
