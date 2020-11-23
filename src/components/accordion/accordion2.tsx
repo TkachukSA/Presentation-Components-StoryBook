@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useReducer, useState} from "react";
 
 type AccardionProopsType = {
     titleValve: string
@@ -8,12 +8,29 @@ type AccardionProopsType = {
 
 function Accardion2(props: AccardionProopsType) {
 
-    let [collapded, setOn] = useState(false)
+    /* let [collapded, setOn] = useState(false)*/
 
+    type actionType = {
+        type: string
+    }
+
+
+    const Reducer = (state: boolean, action: actionType) => {
+        console.log(state)
+        if (action.type === "Togl-Colapsed") {
+            return !state
+        }
+
+        return state
+    }
+    let [collapded, dispatch] = useReducer(Reducer, false)
 
     return (<div>
+            {/*<AccordionTitle title={props.titleValve} OnClick={() => {
+                setOn(!collapded)}}/>*/}
             <AccordionTitle title={props.titleValve} OnClick={() => {
-                setOn(!collapded)}}/>
+                dispatch({type: "Togl-Colapsed"})
+            }}/>
 
             {!collapded && <AccordionBody/>}
 
