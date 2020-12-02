@@ -59,7 +59,7 @@ return<> <input value={value} onChange={onChange}/>
 
 export const Controledchecbox: Story = () => {
 
-    const [chacked, setValue]=useState(false)
+    const [chacked, setValue]=useState(true)
 
     const onChange =(e: ChangeEvent<HTMLInputElement>)=>
     {setValue(e.currentTarget.checked)}
