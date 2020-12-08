@@ -51,6 +51,7 @@
     "@storybook/node-logger": "^6.0.28",
     "@storybook/preset-create-react-app": "^3.1.4",
     "@storybook/react": "^6.0.28",
+    "dotenv": "^8.2.0",
     "react-is": "^17.0.1"
   }
 }
