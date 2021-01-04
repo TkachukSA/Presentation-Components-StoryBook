@@ -14,7 +14,12 @@ export default {
 
 
 
-export const ChangeClock: Story<any> = () => {
+export const EletrClock: Story<any> = () => {
 
-    return<Clock/>;
+    return<Clock mode={'electr'}/>;
+}
+
+export const AnalogClock: Story<any> = () => {
+
+    return<Clock mode={'Analog'}/>;
 }

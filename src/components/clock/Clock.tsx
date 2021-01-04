@@ -1,10 +1,17 @@
 
 import React, {useEffect, useState} from 'react';
+import {ElectrClock} from "./ElectrClock";
+import {AnalogClock} from "./AnalogClock";
 
-export function Clock(){
 
+type clockType={
+    mode: 'Analog' | 'electr'
+}
+
+export function Clock(props: clockType){
 
     const [date, setDate]=useState(new Date())
+
 
     const gett2DigitalsString =(num: number)=>num <10 ? '0'+ num: num
 
@@ -15,34 +22,33 @@ export function Clock(){
             setDate(new Date())
         },1000)
 
-       return()=>{
+        return()=>{
             clearInterval(inrevalId)
-         }
+        }
 
     },[])
 
-    let onStyle = {
-        width: "100px",
-        height: "100px",
-        borderRadius: "50px",
-        border: "1px solid black",
-        display: "inline-block",
-        padding: "2px",
-        marginLeft: "2px",
-        //backgroundColor: on ? "green" : "white"
-    }
+
+    let result
+   switch (props.mode) {
+       case "electr":{
+           return result=<ElectrClock date={date}/>
+       }
+       case "Analog":{
+           return <div><AnalogClock date={date}/></div>
+       }
+
+   }
+
+
 
 
 
 
     return<>
-        <div style={onStyle}></div>
 
-        <span>{gett2DigitalsString(date.getHours())}</span>
-        :
-        <span>{gett2DigitalsString(date.getMinutes())}</span>
-        :
-        <span>{gett2DigitalsString(date.getSeconds())}</span>
+        {result}
+
 
         </>
 
