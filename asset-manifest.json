@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/testsComponents/static/css/main.bb8dfbca.chunk.css",
-    "main.js": "/testsComponents/static/js/main.861b6224.chunk.js",
-    "main.js.map": "/testsComponents/static/js/main.861b6224.chunk.js.map",
-    "runtime-main.js": "/testsComponents/static/js/runtime-main.a7a55747.js",
-    "runtime-main.js.map": "/testsComponents/static/js/runtime-main.a7a55747.js.map",
-    "static/js/2.9c0fa19c.chunk.js": "/testsComponents/static/js/2.9c0fa19c.chunk.js",
-    "static/js/2.9c0fa19c.chunk.js.map": "/testsComponents/static/js/2.9c0fa19c.chunk.js.map",
-    "index.html": "/testsComponents/index.html",
-    "precache-manifest.154ce4a336121acb41fd0cbd80737907.js": "/testsComponents/precache-manifest.154ce4a336121acb41fd0cbd80737907.js",
-    "service-worker.js": "/testsComponents/service-worker.js",
-    "static/css/main.bb8dfbca.chunk.css.map": "/testsComponents/static/css/main.bb8dfbca.chunk.css.map",
-    "static/js/2.9c0fa19c.chunk.js.LICENSE.txt": "/testsComponents/static/js/2.9c0fa19c.chunk.js.LICENSE.txt"
+    "main.css": "/Presentation-Components-StoryBook/static/css/main.bb8dfbca.chunk.css",
+    "main.js": "/Presentation-Components-StoryBook/static/js/main.aaf9a103.chunk.js",
+    "main.js.map": "/Presentation-Components-StoryBook/static/js/main.aaf9a103.chunk.js.map",
+    "runtime-main.js": "/Presentation-Components-StoryBook/static/js/runtime-main.4ba4f5db.js",
+    "runtime-main.js.map": "/Presentation-Components-StoryBook/static/js/runtime-main.4ba4f5db.js.map",
+    "static/js/2.9c0fa19c.chunk.js": "/Presentation-Components-StoryBook/static/js/2.9c0fa19c.chunk.js",
+    "static/js/2.9c0fa19c.chunk.js.map": "/Presentation-Components-StoryBook/static/js/2.9c0fa19c.chunk.js.map",
+    "index.html": "/Presentation-Components-StoryBook/index.html",
+    "precache-manifest.64da8ac69875272b8cf87bd65b0cf33f.js": "/Presentation-Components-StoryBook/precache-manifest.64da8ac69875272b8cf87bd65b0cf33f.js",
+    "service-worker.js": "/Presentation-Components-StoryBook/service-worker.js",
+    "static/css/main.bb8dfbca.chunk.css.map": "/Presentation-Components-StoryBook/static/css/main.bb8dfbca.chunk.css.map",
+    "static/js/2.9c0fa19c.chunk.js.LICENSE.txt": "/Presentation-Components-StoryBook/static/js/2.9c0fa19c.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.a7a55747.js",
+    "static/js/runtime-main.4ba4f5db.js",
     "static/js/2.9c0fa19c.chunk.js",
     "static/css/main.bb8dfbca.chunk.css",
-    "static/js/main.861b6224.chunk.js"
+    "static/js/main.aaf9a103.chunk.js"
   ]
 }
