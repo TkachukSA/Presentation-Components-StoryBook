@@ -34,7 +34,8 @@ export function Select(props: SelectPropsType) {
             {select && select.title}</span>
 
                 {active &&
-                <div className={s.items} onKeyUp={(e)=>{}} tabIndex={0}>
+                <div className={s.items} onKeyUp={(e) => {
+                }} tabIndex={0}>
                     {props.items.map(i => <div
                         className={s.item + " " + (hovoreditem === i ? s.select : " ")}
                         onClick={() => {

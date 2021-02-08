@@ -1,6 +1,7 @@
 import React from "react";
-import {RatingValue} from "../../componets/Rating/Rating";
-type itemType={
+
+
+type itemType = {
     title: string
     value: any
 }
@@ -10,14 +11,14 @@ export type AccardionProopsType = {
     collapsed: boolean
     onClick: () => void
     item: Array<itemType>
-    onClickTitle: (value: any)=> void
+    onClickTitle: (value: any) => void
 }
 
 
-function Accardion(props: AccardionProopsType) {
+function AccordionCntroled(props: AccardionProopsType) {
     console.log("Accordion Reading")
     return (<div>
-            <AccordionTitle title={props.titleValve} onClick={props.onClick}  />
+            <AccordionTitle title={props.titleValve} onClick={props.onClick}/>
             {!props.collapsed && <AccordionBody onClickTitle={props.onClickTitle} item={props.item}/>}
 
         </div>
@@ -29,29 +30,33 @@ type AccordionTitlePropsType = {
     onClick: () => void
 
 }
+
 function AccordionTitle(props: AccordionTitlePropsType) {
     return (
-        <h2 onClick={(e)=>props.onClick()}>---{props.title} --</h2>
+        <h2 onClick={(e) => props.onClick()}>---{props.title} --</h2>
     )
 }
 
 
-type AccordionBodyType={
+type AccordionBodyType = {
     item: Array<itemType>
-    onClickTitle: (value: any)=> void
+    onClickTitle: (value: any) => void
 }
+
 function AccordionBody(props: AccordionBodyType) {
 
-return  <ul>
+    return <ul>
         {
-            props.item.map((i, index) => <li onClick={()=>{props.onClickTitle(i.value)}} key={index}>{i.title}</li>)
+            props.item.map((i, index) => <li onClick={() => {
+                props.onClickTitle(i.value)
+            }} key={index}>{i.title}</li>)
         }
     </ul>
 
 
 }
 
-export default Accardion;
+export default AccordionCntroled;
 
 
 

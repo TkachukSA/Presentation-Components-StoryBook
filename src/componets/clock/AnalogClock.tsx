@@ -1,11 +1,9 @@
-import style from'./ElectrClock.module.css'
+import style from './ElectrClock.module.css'
 import React from 'react';
 import {ClockType} from "./ElectrClock";
 
 
-
-
-export const AnalogClock: React.FC<ClockType>=({date})=>{
+export const AnalogClock: React.FC<ClockType> = ({date}) => {
 
 
     const secondsStyle = {
@@ -19,19 +17,15 @@ export const AnalogClock: React.FC<ClockType>=({date})=>{
     };
 
 
-
-
-    return<>
+    return <>
 
         <div className={style.clock}>
             <div className={style["analog-clock"]}>
-                <div className={`${style.dial} ${style.seconds}`} style={secondsStyle} />
+                <div className={`${style.dial} ${style.seconds}`} style={secondsStyle}/>
                 <div className={`${style.dial} ${style.minutes}`} style={minutesStyle}/>
-                <div className={`${style.dial} ${style.hours}`} style={hoursStyle} />
+                <div className={`${style.dial} ${style.hours}`} style={hoursStyle}/>
             </div>
-            <div className={"digital-clock"}></div>
         </div>
-
 
 
     </>

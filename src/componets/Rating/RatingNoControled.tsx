@@ -4,7 +4,7 @@ type Ratting2Type={
     defaultValue: 0|1|2|3|4|5
 }
 
-export function Rating2(props: Ratting2Type) {
+export function RatingNoControled(props: Ratting2Type) {
     debugger;
     console.log("Star readder")
 
@@ -36,4 +36,4 @@ export function Rating2(props: Ratting2Type) {
 
 
 
-export default Rating2
+export default RatingNoControled

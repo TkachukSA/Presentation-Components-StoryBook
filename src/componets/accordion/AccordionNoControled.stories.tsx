@@ -1,18 +1,19 @@
 import React, {useState} from 'react';
 // also exported from '@storybook/react' if you can deal with breaking changes in 6.1
 import { Story, Meta } from '@storybook/react/types-6-0';
+import AccordionNoControled from "./AccordionNoControled";
 
-import Accardion2 from "./accordion2";
+
 
 
 
 
 export default {
     title: 'Accordion on controled',
-    component: Accardion2,
+    component: AccordionNoControled,
 } as Meta;
 
-export const AccordionColapsed: Story<any> = () => <Accardion2 titleValve={"menu"}/>;
+export const AccordionColapsed: Story<any> = () => <AccordionNoControled titleValve={"menu"}/>;
 
 
 

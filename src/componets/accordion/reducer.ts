@@ -5,13 +5,13 @@ export type actionType = {
 }
 export const togl = "Togl-Colapsed"
 
-export type SteteType={
+export type SteteType = {
     collapsed: boolean
 }
 export const reducer = (state: SteteType, action: actionType): SteteType => {
     switch (action.type) {
         case togl:
-            const stateCopy={...state, collapsed: !state.collapsed }
+            const stateCopy = {...state, collapsed: !state.collapsed}
             return stateCopy
     }
     return state

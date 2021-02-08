@@ -1,15 +1,12 @@
-import React, {useReducer, useState} from "react";
+import React, {useReducer} from "react";
 import {reducer} from "./reducer";
 
 
-type AccardionProopsType = {
-    titleValve: string
 
-}
 
-function Accardion2(props: AccardionProopsType) {
 
-  //  let [collapded, setOn] = useState(false)
+function AccordionNoControled(props: { titleValve: string }) {
+
 
     let [state, dispatch] = useReducer(reducer, {collapsed: false})
 
@@ -17,7 +14,6 @@ function Accardion2(props: AccardionProopsType) {
         <AccordionTitle title={props.titleValve} OnClick={() => {
             dispatch({type: "Togl-Colapsed"})
         }}/>
-
         {!state.collapsed && <AccordionBody/>}
 
     </div>
@@ -31,10 +27,7 @@ type AccordionTitlePropsType = {
 
 function AccordionTitle(props: AccordionTitlePropsType) {
     return (
-        <h2 onClick={() => {
-            props.OnClick()
-        }}>---{props.title} --</h2>
-
+        <h2 onClick={() => {props.OnClick()}}>---{props.title} --</h2>
     )
 }
 
@@ -49,7 +42,7 @@ function AccordionBody() {
     )
 }
 
-export default Accardion2;
+export default AccordionNoControled;
 
 
 
