@@ -1,9 +1,9 @@
 import style from './ElectrClock.module.css'
 import React from 'react';
-import {ClockType} from "./ElectrClock";
 
 
-export const AnalogClock: React.FC<ClockType> = ({date}) => {
+
+export const AnalogClock: React.FC<{  date: Date }> = ({date}) => {
 
 
     const secondsStyle = {
