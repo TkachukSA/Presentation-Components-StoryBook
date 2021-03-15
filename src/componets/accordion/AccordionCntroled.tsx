@@ -18,7 +18,8 @@ export type AccardionProopsType = {
 function AccordionCntroled(props: AccardionProopsType) {
     console.log("Accordion Reading")
     return (<div>
-            <AccordionTitle title={props.titleValve} onClick={props.onClick}/>
+            <AccordionTitle title={props.titleValve}
+                            onClick={props.onClick}/>
             {!props.collapsed && <AccordionBody onClickTitle={props.onClickTitle} item={props.item}/>}
 
         </div>

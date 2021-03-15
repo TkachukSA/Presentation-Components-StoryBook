@@ -20,12 +20,9 @@ function AccordionNoControled(props: { titleValve: string }) {
 
 }
 
-type AccordionTitlePropsType = {
-    title: string
-    OnClick: () => void
-}
 
-function AccordionTitle(props: AccordionTitlePropsType) {
+
+function AccordionTitle(props: {title: string, OnClick: () => void} ) {
     return (
         <h2 onClick={() => {props.OnClick()}}>---{props.title} --</h2>
     )
